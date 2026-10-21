@@ -4,7 +4,7 @@ from library import Library
 
 def main():
     library = Library()
-
+    try:
     while True:
         print("\n===== 图书借阅管理系统 =====")
         print("1. 添加图书")
@@ -47,7 +47,10 @@ def main():
 
         else:
             print("输入有误，请重新选择！")
-
+    except ValueError:
+        print("输入值错误，请输入1~6以内的选项")
+    except Exception:
+        print("输入值错误，请检查后重试")
 
 if __name__ == "__main__":
     main()
